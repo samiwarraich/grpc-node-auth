@@ -7,10 +7,17 @@ import {
   loginHandler,
   refreshAccessTokenHandler,
   registerHandler,
+  verifyEmailHandler,
 } from "./controllers/auth.controller";
 import customConfig from "./config/default";
 import connectDB from "./utils/prisma";
 import { getMeHandler } from "./controllers/user.controller";
+import nodemailer from "nodemailer";
+
+// (async function () {
+//   const credentials = await nodemailer.createTestAccount();
+//   console.log(credentials);
+// })();
 
 const options: protoLoader.Options = {
   keepCase: true,
@@ -38,6 +45,7 @@ server.addService(authPackage.AuthService.service, {
   SignUpUser: (req, res) => registerHandler(req, res),
   SignInUser: (req, res) => loginHandler(req, res),
   RefreshToken: (req, res) => refreshAccessTokenHandler(req, res),
+  VerifyEmail: (req, res) => verifyEmailHandler(req, res),
   GetMe: (req, res) => getMeHandler(req, res),
 } as AuthServiceHandlers);
 server.bindAsync(

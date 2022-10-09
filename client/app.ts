@@ -41,13 +41,14 @@ function onClientReady() {
   // signInUser();
   // refreshToken();
   // getAuthenticatedUser();
+  // verifyEmail("15479b538ed8fcdd6e6e1fd0a194dac79f917a3a");
 }
 
 function signUpUser() {
   client.SignUpUser(
     {
       name: "Sami Warraich",
-      email: "sami@test.com",
+      email: "sami@test.c",
       password: "123456",
       passwordConfirm: "123456",
       photo: "default.png",
@@ -106,4 +107,14 @@ function getAuthenticatedUser() {
       console.log(res);
     }
   );
+}
+
+function verifyEmail(verification_code: string) {
+  client.verifyEmail({ verification_code }, (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(res);
+  });
 }

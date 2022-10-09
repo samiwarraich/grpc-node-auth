@@ -20,6 +20,7 @@ export interface ProtoGrpcType {
     SignUpUserResponse: MessageTypeDefinition
     User: MessageTypeDefinition
     UserResponse: MessageTypeDefinition
+    VerifyEmailInput: MessageTypeDefinition
   }
   google: {
     protobuf: {

@@ -2,14 +2,15 @@
 
 import type * as grpc from '@grpc/grpc-js'
 import type { MethodDefinition } from '@grpc/proto-loader'
+import type { GenericResponse as _auth_GenericResponse, GenericResponse__Output as _auth_GenericResponse__Output } from '../auth/GenericResponse';
 import type { GetMeInput as _auth_GetMeInput, GetMeInput__Output as _auth_GetMeInput__Output } from '../auth/GetMeInput';
 import type { RefreshTokenInput as _auth_RefreshTokenInput, RefreshTokenInput__Output as _auth_RefreshTokenInput__Output } from '../auth/RefreshTokenInput';
 import type { RefreshTokenResponse as _auth_RefreshTokenResponse, RefreshTokenResponse__Output as _auth_RefreshTokenResponse__Output } from '../auth/RefreshTokenResponse';
 import type { SignInUserInput as _auth_SignInUserInput, SignInUserInput__Output as _auth_SignInUserInput__Output } from '../auth/SignInUserInput';
 import type { SignInUserResponse as _auth_SignInUserResponse, SignInUserResponse__Output as _auth_SignInUserResponse__Output } from '../auth/SignInUserResponse';
 import type { SignUpUserInput as _auth_SignUpUserInput, SignUpUserInput__Output as _auth_SignUpUserInput__Output } from '../auth/SignUpUserInput';
-import type { SignUpUserResponse as _auth_SignUpUserResponse, SignUpUserResponse__Output as _auth_SignUpUserResponse__Output } from '../auth/SignUpUserResponse';
 import type { UserResponse as _auth_UserResponse, UserResponse__Output as _auth_UserResponse__Output } from '../auth/UserResponse';
+import type { VerifyEmailInput as _auth_VerifyEmailInput, VerifyEmailInput__Output as _auth_VerifyEmailInput__Output } from '../auth/VerifyEmailInput';
 
 export interface AuthServiceClient extends grpc.Client {
   GetMe(argument: _auth_GetMeInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_UserResponse__Output>): grpc.ClientUnaryCall;
@@ -39,14 +40,23 @@ export interface AuthServiceClient extends grpc.Client {
   signInUser(argument: _auth_SignInUserInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_SignInUserResponse__Output>): grpc.ClientUnaryCall;
   signInUser(argument: _auth_SignInUserInput, callback: grpc.requestCallback<_auth_SignInUserResponse__Output>): grpc.ClientUnaryCall;
   
-  SignUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  SignUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  SignUpUser(argument: _auth_SignUpUserInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  SignUpUser(argument: _auth_SignUpUserInput, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  signUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  signUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  signUpUser(argument: _auth_SignUpUserInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
-  signUpUser(argument: _auth_SignUpUserInput, callback: grpc.requestCallback<_auth_SignUpUserResponse__Output>): grpc.ClientUnaryCall;
+  SignUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  SignUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  SignUpUser(argument: _auth_SignUpUserInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  SignUpUser(argument: _auth_SignUpUserInput, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  signUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  signUpUser(argument: _auth_SignUpUserInput, metadata: grpc.Metadata, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  signUpUser(argument: _auth_SignUpUserInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  signUpUser(argument: _auth_SignUpUserInput, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  
+  VerifyEmail(argument: _auth_VerifyEmailInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  VerifyEmail(argument: _auth_VerifyEmailInput, metadata: grpc.Metadata, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  VerifyEmail(argument: _auth_VerifyEmailInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  VerifyEmail(argument: _auth_VerifyEmailInput, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  verifyEmail(argument: _auth_VerifyEmailInput, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  verifyEmail(argument: _auth_VerifyEmailInput, metadata: grpc.Metadata, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  verifyEmail(argument: _auth_VerifyEmailInput, options: grpc.CallOptions, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
+  verifyEmail(argument: _auth_VerifyEmailInput, callback: grpc.requestCallback<_auth_GenericResponse__Output>): grpc.ClientUnaryCall;
   
 }
 
@@ -57,7 +67,9 @@ export interface AuthServiceHandlers extends grpc.UntypedServiceImplementation {
   
   SignInUser: grpc.handleUnaryCall<_auth_SignInUserInput__Output, _auth_SignInUserResponse>;
   
-  SignUpUser: grpc.handleUnaryCall<_auth_SignUpUserInput__Output, _auth_SignUpUserResponse>;
+  SignUpUser: grpc.handleUnaryCall<_auth_SignUpUserInput__Output, _auth_GenericResponse>;
+  
+  VerifyEmail: grpc.handleUnaryCall<_auth_VerifyEmailInput__Output, _auth_GenericResponse>;
   
 }
 
@@ -65,5 +77,6 @@ export interface AuthServiceDefinition extends grpc.ServiceDefinition {
   GetMe: MethodDefinition<_auth_GetMeInput, _auth_UserResponse, _auth_GetMeInput__Output, _auth_UserResponse__Output>
   RefreshToken: MethodDefinition<_auth_RefreshTokenInput, _auth_RefreshTokenResponse, _auth_RefreshTokenInput__Output, _auth_RefreshTokenResponse__Output>
   SignInUser: MethodDefinition<_auth_SignInUserInput, _auth_SignInUserResponse, _auth_SignInUserInput__Output, _auth_SignInUserResponse__Output>
-  SignUpUser: MethodDefinition<_auth_SignUpUserInput, _auth_SignUpUserResponse, _auth_SignUpUserInput__Output, _auth_SignUpUserResponse__Output>
+  SignUpUser: MethodDefinition<_auth_SignUpUserInput, _auth_GenericResponse, _auth_SignUpUserInput__Output, _auth_GenericResponse__Output>
+  VerifyEmail: MethodDefinition<_auth_VerifyEmailInput, _auth_GenericResponse, _auth_VerifyEmailInput__Output, _auth_GenericResponse__Output>
 }
