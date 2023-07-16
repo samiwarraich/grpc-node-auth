@@ -16,13 +16,13 @@
     "@types/jsonwebtoken": "^9.0.1",
     "@types/nodemailer": "^6.4.7",
     "@types/pug": "^2.0.6",
-    "prisma": "^4.12.0",
+    "prisma": "^5.0.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.8.14",
-    "@grpc/proto-loader": "^0.7.6",
+    "@grpc/proto-loader": "^0.7.8",
     "@prisma/client": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",
