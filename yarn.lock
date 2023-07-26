@@ -33,10 +33,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@grpc/grpc-js@^1.8.14":
-  version "1.8.14"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.14.tgz#4fe0f9917d6f094cf59245763c275442b182e9ad"
-  integrity sha512-w84maJ6CKl5aApCMzFll0hxtFNT6or9WwMslobKaqWUEf1K+zhlL43bSQhFreyYWIWR+Z0xnVFC1KtLm4ZpM/A==
+"@grpc/grpc-js@^1.8.20":
+  version "1.8.20"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.20.tgz#03dc316045664299bbf30f0458f5877ebeec5815"
+  integrity sha512-SPse1wE4PcIFojOISsAnrWXCBsCBwDdcDqz2SS0T8nBSxg9jwmCK70Jy7ypRn2nIspwLy3Ls5TNaKNHo+6dF8A==
   dependencies:
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
