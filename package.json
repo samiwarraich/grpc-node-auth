@@ -21,7 +21,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.9.2",
+    "@grpc/grpc-js": "^1.9.3",
     "@grpc/proto-loader": "^0.7.9",
     "@prisma/client": "^5.2.0",
     "bcryptjs": "^2.4.3",
