@@ -206,10 +206,10 @@
   resolved "https://registry.yarnpkg.com/@types/bcryptjs/-/bcryptjs-2.4.5.tgz#15473cc012f825b3435b189376f645bdd2fc9f11"
   integrity sha512-tOF6TivOIvq+TWQm78335CMdyVJhpBG3NUdWQDAp95ax4E2rSKbws/ELHLk5EBoucwx/tHt3/hhLOHwWJgVrSw==
 
-"@types/html-to-text@^9.0.2":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@types/html-to-text/-/html-to-text-9.0.2.tgz#3efb7004b22328f2ac6d7d066c6d6663db8810a3"
-  integrity sha512-cO9qsPwfIJ2GKFJ4AgpgmmFoUr0IulsN1clwOiPdChpsY/LVmbpGenUGrvZiYsSXSg/dWsj4NTzWZeIlv3D22w==
+"@types/html-to-text@^9.0.3":
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/@types/html-to-text/-/html-to-text-9.0.3.tgz#9edab22c8b87c3d0349deab4fc666a2f77d50df3"
+  integrity sha512-ImzcLdHN3+zghCoZcA+vWd/t0GhM10S7lnvSq9YA6lbo4HGK10WIJ7n+NI7mbeVZeUtgrmK5fXM66kZcws1oHA==
 
 "@types/jsonwebtoken@^9.0.4":
   version "9.0.4"
